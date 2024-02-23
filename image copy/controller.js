@@ -6,6 +6,7 @@ const postImage = expressHandler(async (req, res) => {
     if (!req.file) {
       return res.status(500).json({ error: "No file found" });
     }
+    
     const imageFile = Image({
       filename: req.file.filename,
       filepath: req.file.path,
