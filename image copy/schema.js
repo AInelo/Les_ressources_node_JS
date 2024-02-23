@@ -1,6 +1,19 @@
 const mongoose = require("mongoose");
 
 const ImageSchema = mongoose.Schema({
+  name: {
+    type: String,
+    // required: [true, 'must provide name'],
+    trim: true,
+  },
+  lastname: {
+    type: String,
+    // required: [true, 'must provide lastname'],
+    trim: true,
+  },
+  number: {
+    type: String,
+  },
   filename: {
     type: String,
     required: true,
